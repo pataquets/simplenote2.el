@@ -1062,6 +1062,13 @@ Reset pinned flag if ARG is given."
   (if simplenote2-note-mode
       (run-hooks 'simplenote2-note-mode-hook)))
 
+;;;###autoload
+(defun simplenote2-open-note (key)
+  "Open a note from simplenote using its KEY."
+  (interactive)
+  (simplenote2--open-note
+   (simplenote2--filename-for-note key)))
+
 
 (provide 'simplenote2)
 
